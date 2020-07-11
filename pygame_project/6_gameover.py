@@ -139,7 +139,7 @@ while running:
         ball_width = ball_size[0]
         ball_height = ball_size[1]
 
-        if ball_pos_x <= 0 or ball_pos_x > screen_width - ball_width:
+        if ball_pos_x < 0 or ball_pos_x > screen_width - ball_width:
             ball_val["to_x"] = ball_val["to_x"] * -1
 
         if ball_pos_y >= screen_height - stage_height - ball_height:
@@ -212,6 +212,9 @@ while running:
                     })
 
                 break
+        else:
+            continue
+        break
 
     if ball_to_remove > -1:
         del balls[ball_to_remove]
@@ -223,6 +226,7 @@ while running:
     if len(balls) == 0:
         game_result = "Mission Complete"
         running = False
+
     # 5. Display to Screen
     screen.blit(background, (0, 0))
     for weapon_x_pos, weapon_y_pos in weapons:
@@ -245,8 +249,10 @@ while running:
     if total_time - elapsed_time <= 0:
         game_result = "Time Out"
         running = False
+
     # Update Display
     pygame.display.update()
+
 msg = game_font.render(game_result, True, (255, 255, 0))
 msg_rect = msg.get_rect(center=(int(screen_width/2), int(screen_height / 2)))
 screen.blit(msg, msg_rect)
