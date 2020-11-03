@@ -6,3 +6,5 @@
 
 나도코딩 파이썬 강의 활용편(Game) : https://youtu.be/Dkx8Pl6QKW0
 ## 구성
+### Pygame Basic
+- create frame
