@@ -8,3 +8,10 @@
 ## 구성
 ### Pygame Basic
 - create frame
+- Background frame
+- Main sprite
+- Keyboard event
+- Frame per second
+- Collision
+- Text
+- Frame
