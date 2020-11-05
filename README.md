@@ -15,3 +15,11 @@
 - Collision
 - Text
 - Frame
+### Pygame Project
+- frame background stage character
+- weapon keyevent
+- ball movement
+- collision
+- ball division
+- gameover
+- Ball Pang Game
